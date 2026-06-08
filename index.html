@@ -14,8 +14,6 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: transparen
 .modal-overlay.active { display: flex; }
 .modal-box { background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%); border: 3px solid #d4af37; border-radius: 20px; padding: 30px 35px; max-width: 500px; width: 90%; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(128, 0, 255, 0.2); animation: modalAppear 0.4s ease-out; }
 @keyframes modalAppear { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-.modal-close { position: absolute; top: 12px; right: 16px; font-size: 24px; color: #d4af37; cursor: pointer; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid #d4af37; background: rgba(212, 175, 55, 0.1); transition: all 0.3s; }
-.modal-close:hover { background: rgba(212, 175, 55, 0.3); transform: rotate(90deg); }
 .modal-sentence { font-size: 20px; color: #f0e6ff; text-align: center; margin-bottom: 25px; font-family: Georgia, serif; line-height: 1.5; text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
 .modal-options { display: flex; flex-direction: column; gap: 12px; }
 .option-btn { padding: 14px 20px; font-size: 17px; border: 2px solid #d4af37; border-radius: 12px; background: linear-gradient(135deg, rgba(75, 0, 130, 0.6), rgba(128, 0, 255, 0.3)); color: #f0e6ff; cursor: pointer; transition: all 0.3s; font-family: Georgia, serif; }
@@ -41,7 +39,6 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: transparen
 <div id="game-container"></div>
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal-box">
-    <div class="modal-close" id="modal-close"></div>
     <div class="modal-sentence" id="modal-sentence"></div>
     <div class="modal-options" id="modal-options"></div>
   </div>
@@ -208,8 +205,6 @@ function closeModal() {
   } 
   currentFishIndex = -1; 
 }
-
-document.getElementById("modal-close").addEventListener("click", () => { closeModal(); });
 
 function showFinalScreen() { 
   const finalOverlay = document.getElementById("final-overlay"); 

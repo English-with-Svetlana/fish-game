@@ -12,12 +12,12 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: transparen
 .fish:hover { transform: scale(1.3); filter: drop-shadow(0 0 6px #d4af37); }
 .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1000; justify-content: center; align-items: center; }
 .modal-overlay.active { display: flex; }
-.modal-box { background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%); border: 3px solid #d4af37; border-radius: 20px; padding: 30px 35px; max-width: 500px; width: 90%; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(128, 0, 255, 0.2); animation: modalAppear 0.4s ease-out; }
+.modal-box { background: linear-gradient(135deg, #0a2a4e 0%, #1b5b8e 50%, #0a2a4e 100%); border: 3px solid #d4af37; border-radius: 20px; padding: 30px 35px; max-width: 500px; width: 90%; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(30, 144, 255, 0.3); animation: modalAppear 0.4s ease-out; }
 @keyframes modalAppear { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-.modal-sentence { font-size: 20px; color: #f0e6ff; text-align: center; margin-bottom: 25px; font-family: Georgia, serif; line-height: 1.5; text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
+.modal-sentence { font-size: 20px; color: #f0f6ff; text-align: center; margin-bottom: 25px; font-family: Georgia, serif; line-height: 1.5; text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
 .modal-options { display: flex; flex-direction: column; gap: 12px; }
-.option-btn { padding: 14px 20px; font-size: 17px; border: 2px solid #d4af37; border-radius: 12px; background: linear-gradient(135deg, rgba(75, 0, 130, 0.6), rgba(128, 0, 255, 0.3)); color: #f0e6ff; cursor: pointer; transition: all 0.3s; font-family: Georgia, serif; }
-.option-btn:hover { background: linear-gradient(135deg, rgba(128, 0, 255, 0.5), rgba(212, 175, 55, 0.3)); box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); transform: translateY(-2px); }
+.option-btn { padding: 14px 20px; font-size: 17px; border: 2px solid #d4af37; border-radius: 12px; background: linear-gradient(135deg, rgba(30, 100, 180, 0.6), rgba(60, 150, 220, 0.4)); color: #f0f6ff; cursor: pointer; transition: all 0.3s; font-family: Georgia, serif; }
+.option-btn:hover { background: linear-gradient(135deg, rgba(60, 144, 220, 0.6), rgba(212, 175, 55, 0.3)); box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); transform: translateY(-2px); }
 .option-btn.correct { background: linear-gradient(135deg, #1b5e20, #4caf50) !important; border-color: #4caf50 !important; box-shadow: 0 0 20px rgba(76, 175, 80, 0.5); animation: correctPulse 0.5s; }
 .option-btn.wrong { background: linear-gradient(135deg, #b71c1c, #f44336) !important; border-color: #f44336 !important; box-shadow: 0 0 20px rgba(244, 67, 54, 0.5); animation: wrongShake 0.5s; }
 @keyframes correctPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
@@ -27,9 +27,9 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: transparen
 @keyframes fireworkBurst { 0% { transform: translate(0, 0) scale(1); opacity: 1; } 100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; } }
 .final-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 3000; justify-content: center; align-items: center; flex-direction: column; }
 .final-overlay.active { display: flex; }
-.final-box { background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%); border: 3px solid #d4af37; border-radius: 20px; padding: 40px 50px; max-width: 500px; width: 90%; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(128, 0, 255, 0.2); animation: modalAppear 0.4s ease-out; text-align: center; }
-.final-text { font-size: 50px; font-family: Georgia, serif; color: #d4af37; text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 60px rgba(128, 0, 255, 0.4); animation: finalPulse 2s infinite; }
-@keyframes finalPulse { 0%, 100% { transform: scale(1); text-shadow: 0 0 30px rgba(212, 175, 55, 0.8); } 50% { transform: scale(1.05); text-shadow: 0 0 50px rgba(212, 175, 55, 1), 0 0 80px rgba(128, 0, 255, 0.6); } }
+.final-box { background: linear-gradient(135deg, #0a2a4e 0%, #1b5b8e 50%, #0a2a4e 100%); border: 3px solid #d4af37; border-radius: 20px; padding: 40px 50px; max-width: 500px; width: 90%; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(30, 144, 255, 0.3); animation: modalAppear 0.4s ease-out; text-align: center; }
+.final-text { font-size: 50px; font-family: Georgia, serif; color: #d4af37; text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 60px rgba(30, 144, 255, 0.5); animation: finalPulse 2s infinite; }
+@keyframes finalPulse { 0%, 100% { transform: scale(1); text-shadow: 0 0 30px rgba(212, 175, 55, 0.8); } 50% { transform: scale(1.05); text-shadow: 0 0 50px rgba(212, 175, 55, 1), 0 0 80px rgba(30, 144, 255, 0.6); } }
 .final-firework { position: fixed; pointer-events: none; z-index: 3001; }
 .final-particle { position: absolute; width: 8px; height: 8px; border-radius: 50%; animation: finalBurst 1.5s ease-out forwards; }
 @keyframes finalBurst { 0% { transform: translate(0, 0) scale(1); opacity: 1; } 100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; } }
@@ -49,7 +49,6 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: transparen
   </div>
 </div>
 <script>
-// ✅ ЗАЩИТА ОТ ПОВТОРНОГО ЗАПУСКА
 if (window.__fishGameStarted) {
   if (window.__fishAnimFrame) cancelAnimationFrame(window.__fishAnimFrame);
   document.getElementById("game-container").innerHTML = "";
@@ -109,7 +108,6 @@ function createFish() {
     fish.dataset.x = x; 
     fish.dataset.y = y; 
     
-    // ✅ ЗАЩИТА ОТ ДВОЙНОГО КЛИКА
     fish.addEventListener("click", function(e) {
       e.stopPropagation();
       if (currentFishIndex !== -1 || this.style.display === "none") return;
@@ -211,13 +209,11 @@ function showFinalScreen() {
   finalOverlay.classList.add("active"); 
   playVictorySound(); 
   
-  // ✅ САЛЮТ ВНУТРИ ОКОШКА
   const finalBox = document.querySelector(".final-box");
   const boxRect = finalBox.getBoundingClientRect();
   const centerX = boxRect.left + boxRect.width / 2;
   const centerY = boxRect.top + boxRect.height / 2;
   
-  // Создаем салют вокруг окошка
   let count = 0;
   const interval = setInterval(() => {
     const x = centerX + (Math.random() - 0.5) * 200;
